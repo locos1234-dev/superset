@@ -135,6 +135,14 @@ WEBDRIVER_BASEURL_USER_FRIENDLY = (
 )
 SQLLAB_CTAS_NO_LIMIT = True
 
+# Languages offered in the header language picker. The picker is shown only when
+# more than one language is configured. Translations must be compiled into the
+# image (BUILD_TRANSLATIONS=true) for the interface to switch language.
+LANGUAGES = {
+    "en": {"flag": "us", "name": "English"},
+    "ru": {"flag": "ru", "name": "Russian"},
+}
+
 log_level_text = os.getenv("SUPERSET_LOG_LEVEL", "INFO")
 LOG_LEVEL = getattr(logging, log_level_text.upper(), logging.INFO)
 
